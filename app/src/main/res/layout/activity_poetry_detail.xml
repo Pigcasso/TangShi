@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/icons">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_wintersweet" />
+
+    <!--<include layout="@layout/include_tool_bar"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/text_poetry_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/spacing_huge"
+                android:text="静夜思"
+                android:textSize="@dimen/font_huge" />
+
+            <TextView
+                android:id="@id/text_poetry_detail_auth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/text_poetry_detail_content"
+                android:layout_below="@id/text_poetry_detail_title"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="李白"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@id/text_poetry_detail_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_poetry_detail_auth"
+                android:layout_centerHorizontal="true"
+                android:text="窗前明月光，疑似地上霜。\n举头望明月，低头思故乡。"
+                android:textSize="@dimen/font_large" />
+
+            <TextView
+                android:id="@id/text_poetry_detail_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_poetry_detail_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/spacing_large"
+                android:text="赏析"
+                android:textSize="@dimen/font_normal" />
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
+

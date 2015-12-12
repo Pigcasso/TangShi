@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/bg_green_hills" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/recycler_list"
+        android:name="io.liamju.tangshi.fragment.PoetryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".fragment.BaseListFragment"
+        tools:listitem="@layout/item_poetry" />
+
+    <TextView
+        android:id="@id/text_poetry_sort"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_text_poetry_sort"
+        android:gravity="center"
+        android:textSize="@dimen/font_huge"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <io.github.brightyoyo.IndexBar
+        android:id="@id/index_poetry_alphabet"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/spacing_small"
+        app:alphabetTextColor="@color/icons"
+        app:indexBarColorNormal="@color/primary_light"
+        app:indexBarColorPressed="@color/primary"
+        app:indexBarRound="@dimen/spacing_tiny" />
+
+</RelativeLayout>

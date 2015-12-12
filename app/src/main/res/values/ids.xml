@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tool_bar" type="id" />
+    <item name="tab_host" type="id" />
+    <item name="real_tab_content" type="id" />
+    <item name="text_tab_title" type="id" />
+    <item name="text_item_title" type="id" />
+    <item name="text_item_poetry_title" type="id" />
+    <item name="text_poetry_detail_title" type="id" />
+    <item name="text_poetry_detail_content" type="id" />
+    <item name="text_poetry_detail_auth" type="id" />
+    <item name="text_poetry_detail_desc" type="id" />
+    <item name="menu_item_star" type="id" />
+    <item name="index_poetry_alphabet" type="id" />
+    <item name="recycler_list" type="id" />
+    <item name="text_poetry_sort" type="id" />
+    <item name="frame_fragment_container" type="id" />
+    <item name="linear_setting_software" type="id" />
+    <item name="text_setting_cache_size" type="id" />
+    <item name="check_poetry_detail_star" type="id" />
+    <item name="linear_item_footprint_root" type="id" />
+    <item name="text_item_footprint_title" type="id" />
+    <item name="linear_setting_clean" type="id" />
+    <item name="linear_setting_history" type="id" />
+    <item name="linear_setting_collection" type="id" />
+    <item name="linear_setting_feed_back" type="id" />
+    <item name="linear_setting_about" type="id" />
+    <item name="layout_container" type="id" />
+    <item name="relative_about_designer" type="id" />
+    <item name="relative_about_developer" type="id" />
+    <item name="text_about_introduce" type="id" />
+    <item name="menu_search" type="id" />
+    <item name="menu_search_poetry" type="id" />
+</resources>

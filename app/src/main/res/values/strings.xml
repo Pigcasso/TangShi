@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">唐诗300首</string>
+    <string name="title_activity_main">@string/app_name</string>
+    <string name="title_activity_poetry_detail">详情</string>
+
+    <!--选项卡文字-->
+    <string name="main_tab_poetry">诗词</string>
+    <string name="main_tab_auth">作者</string>
+    <string name="main_tab_category">分类</string>
+    <string name="main_tab_setting">设置</string>
+
+    <string name="title_tab_poetry">诗词列表</string>
+    <string name="title_tab_auth">作者列表</string>
+    <string name="title_tab_category">类别列表</string>
+    <string name="title_tab_setting">设置</string>
+
+    <!--选项卡诗词-->
+    <string name="tab_age">年代</string>
+    <string name="tab_alphabet">字母</string>
+
+    <!--选项卡作者-->
+    <string name="tab_work_num">作品数</string>
+
+    <!--选项卡分类-->
+    <string name="tab_category">诗词分类</string>
+
+    <!--选项卡设置-->
+    <string name="label_software_update">软件更新</string>
+    <string name="label_clean_cache">清除缓存</string>
+    <string name="label_history_record">历史记录</string>
+    <string name="label_my_collection">我的收藏</string>
+    <string name="label_feed_back">意见反馈</string>
+    <string name="label_about">关于</string>
+
+    <!--Toast-->
+    <string name="toast_software_is_latest">当前为最新版本</string>
+    <string name="title_star">收藏</string>
+    <string name="btn_positive">确定</string>
+    <string name="btn_negative">取消</string>
+    <string name="certain_clean_data">确定清除缓存吗?</string>
+    <string name="label_developer">开发者</string>
+
+
+    <!--Icon Font-->
+    <string name="icon_arrow">&#xe612;</string>
+
+
+    <string name="label_designer">原型作者</string>
+    <string name="title_about">关于我们</string>
+    <string name="label_developer_name">LiamJu</string>
+    <string name="label_designer_name">星星褪了色</string>
+
+    <!--意见反馈-->
+    <string name="feedback_email_subject">关于《唐三百》</string>
+    <string name="feedback_email_prefix">苦逼开发者们!\n&#160;&#160;&#160;&#160;我希望向亲们提出如下意见：></string>
+    <string name="label_about_introduce">&#160;&#160;&#160;&#160;《唐诗三百首》这款应用是本人经星星褪了色同意，将其分享在《站酷网》的原型作品，制作成了这款呈现在您面前的安卓App。希望您能够喜欢这款应用，如果您有什么好的意见可以到“设置-意见反馈”发送邮件给我们，或者在使用中发现了什么问题，也可以反馈给我们，我们会尽快的解决。</string>
+    <string name="toast_latest_version">当前为最新版本!</string>
+    <string name="title_search_poetry">搜索</string>
+
+    <string name="hint_search">作者/标题/诗句</string>
+</resources>
