@@ -31,4 +31,6 @@
     <item name="text_about_introduce" type="id" />
     <item name="menu_search" type="id" />
     <item name="menu_search_poetry" type="id" />
+    <item name="text_searchable_title" type="id" />
+    <item name="text_searchable_author" type="id" />
 </resources>

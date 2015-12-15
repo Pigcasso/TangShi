@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.database.Cursor;
+import android.text.TextUtils;
 
 import com.github.promeg.pinyinhelper.Pinyin;
 
@@ -19,6 +20,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -201,6 +203,20 @@ public class PoetryUtil {
         if (mDbOpenHelper != null) {
             mDbOpenHelper.close();
         }
+    }
+
+    public List<Poetry> searchPoetry(String newText) {
+        String key = newText.trim();
+        List<Poetry> result = new LinkedList<>();
+        if (TextUtils.isEmpty(key)) {
+            return result;
+        }
+        for (Poetry poetry : mPoetryList) {
+            if (poetry.contains(key)) {
+                result.add(poetry);
+            }
+        }
+        return result;
     }
 
     private class PoetryComparator implements Comparator<Poetry> {

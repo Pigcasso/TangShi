@@ -33,4 +33,15 @@
         <item name="android:textSize">@dimen/font_large</item>
     </style>
 
+    <style name="ItemSearchTitle" parent="width_wrap_height_wrap">
+        <item name="android:layout_marginLeft">@dimen/spacing_normal</item>
+        <item name="android:layout_marginTop">@dimen/spacing_normal</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_normal</item>
+        <item name="android:textAppearance">?attr/textAppearanceListItem</item>
+    </style>
+
+    <style name="ItemSearchAuthor" parent="width_wrap_height_wrap">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
 </resources>

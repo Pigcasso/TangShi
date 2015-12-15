@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TabHost;
@@ -28,10 +29,9 @@ public class MainActivity extends BaseActivity {
     }
 
     /**
-     * 1.0暂时不添加搜索功能
+     * 1.1暂时不添加搜索功能
      *
-     * @return
-     * @version 1.0
+     * @return 返回布局资源id
      */
     @Override
     protected int getLayoutResId() {
@@ -41,8 +41,8 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the options menu from XML
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.menu_search, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_search, menu);
         return true;
     }
 

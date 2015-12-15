@@ -18,11 +18,15 @@ import butterknife.ButterKnife;
 public abstract class BaseAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
     protected List<T> mValues;
 
+    public BaseAdapter() {
+        mValues = new ArrayList<>();
+    }
+
     public BaseAdapter(List<T> mValues) {
         this.mValues = mValues;
     }
 
-    public BaseAdapter(T... values) {
+    public BaseAdapter(T[] values) {
         this.mValues = Arrays.asList(values);
     }
 

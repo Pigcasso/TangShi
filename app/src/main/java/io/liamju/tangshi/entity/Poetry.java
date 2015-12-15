@@ -63,4 +63,10 @@ public class Poetry implements Serializable {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
+    public boolean contains(String key) {
+        return title.contains(key)
+                || auth.contains(key)
+                || content.contains(key);
+    }
 }

@@ -19,7 +19,7 @@ import io.liamju.tangshi.fragment.BaseListFragment.OnItemClickListener;
 public class CommonSimpleAdapter extends BaseAdapter<String, CommonSimpleAdapter.ViewHolder> {
     private OnItemClickListener mListener;
 
-    public CommonSimpleAdapter(OnItemClickListener listener, String... values) {
+    public CommonSimpleAdapter(OnItemClickListener listener, String[] values) {
         super(values);
         mListener = listener;
     }

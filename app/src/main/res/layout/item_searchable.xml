@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@id/text_searchable_title"
+        style="@style/ItemSearchTitle"
+        android:text="静夜思" />
+
+    <TextView
+        android:id="@id/text_searchable_author"
+        style="@style/ItemSearchAuthor"
+        android:layout_alignBottom="@id/text_searchable_title"
+        android:layout_toRightOf="@id/text_searchable_title"
+        android:text="李白" />
+</RelativeLayout>

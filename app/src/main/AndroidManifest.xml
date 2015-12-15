@@ -35,6 +35,7 @@
             android:exported="false" />
 
         <activity
+            android:label=""
             android:name=".activity.SearchableActivity"
             android:exported="false" />
 
