@@ -3,6 +3,7 @@
     <item name="tool_bar" type="id" />
     <item name="tab_host" type="id" />
     <item name="real_tab_content" type="id" />
+    <item name="text_tab_icon" type="id" />
     <item name="text_tab_title" type="id" />
     <item name="text_item_title" type="id" />
     <item name="text_item_poetry_title" type="id" />

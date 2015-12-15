@@ -17,7 +17,7 @@
             android:layout_marginTop="@dimen/spacing_huge"
             android:src="@mipmap/ic_launcher" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <io.liamju.tangshi.view.FontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_small"
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_small"
-        android:background="@color/icons"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -37,8 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                style="@style/ItemTextStyle"
+            <io.liamju.tangshi.view.FontTextView
+                style="@style/ItemTitleStyle"
                 android:text="@string/label_designer" />
 
             <LinearLayout
@@ -48,7 +48,7 @@
                 android:layout_centerVertical="true"
                 android:orientation="horizontal">
 
-                <TextView
+                <io.liamju.tangshi.view.FontTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/label_designer_name" />
@@ -63,8 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                style="@style/ItemTextStyle"
+            <io.liamju.tangshi.view.FontTextView
+                style="@style/ItemTitleStyle"
                 android:text="@string/label_developer" />
 
             <LinearLayout
@@ -74,7 +74,7 @@
                 android:layout_centerVertical="true"
                 android:orientation="horizontal">
 
-                <TextView
+                <io.liamju.tangshi.view.FontTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/label_developer_name" />
@@ -85,7 +85,7 @@
         </RelativeLayout>
     </android.support.v7.widget.LinearLayoutCompat>
 
-    <android.support.v7.widget.AppCompatTextView
+    <io.liamju.tangshi.view.FontTextView
         android:id="@id/text_about_introduce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -31,7 +31,6 @@ public class AppConstants {
 
     public static final String KEY_LOAD_URL = "loadUrl";
 
-    public static final String ICON_FONT_PATH = "iconfont/iconfont.ttf";
     public static final String URL_DESIGNER_HOMEPAGE = "http://www.zcool.com.cn/u/13619712";
     public static final String URL_DEVELOPER_HOMEPAGE = "http://weibo.com/droideep";
     public static final String MAIL_DEVELOPER = "droideep@163.com";

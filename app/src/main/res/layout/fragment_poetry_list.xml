@@ -23,7 +23,7 @@
         tools:context=".fragment.BaseListFragment"
         tools:listitem="@layout/item_poetry" />
 
-    <TextView
+    <io.liamju.tangshi.view.FontTextView
         android:id="@id/text_poetry_sort"
         android:layout_width="96dp"
         android:layout_height="96dp"
@@ -41,7 +41,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="@dimen/spacing_small"
-        app:alphabetTextColor="@color/icons"
+        app:alphabetTextColor="@color/white"
         app:indexBarColorNormal="@color/primary_light"
         app:indexBarColorPressed="@color/primary"
         app:indexBarRound="@dimen/spacing_tiny" />

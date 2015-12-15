@@ -7,36 +7,35 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import io.liamju.tangshi.AppConstants;
 import io.liamju.tangshi.TangApplication;
 import io.liamju.tangshi.utils.TypefaceUtil;
 
 /**
  * @author LiamJu
  * @version 1.0
- * @since 15/12/7
+ * @since 15/12/15
  */
-public class IconTextView extends TextView {
-    public IconTextView(Context context) {
+public class FontTextView extends TextView {
+    public FontTextView(Context context) {
         super(context);
     }
 
-    public IconTextView(Context context, AttributeSet attrs) {
+    public FontTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public IconTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FontTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public IconTextView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public FontTextView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
     @Override
-    public void setText(CharSequence text, BufferType type) {
-        Typeface typeface = TangApplication.getInstance().getIconTypeface();
+    public void setText(CharSequence text, TextView.BufferType type) {
+        Typeface typeface = TangApplication.getInstance().getFontTypeface();
         setTypeface(typeface);
         super.setText(text, type);
     }

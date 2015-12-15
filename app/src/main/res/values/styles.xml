@@ -20,11 +20,14 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="ItemTextStyle" parent="width_wrap_height_wrap">
-        <item name="android:layout_margin">@dimen/spacing_normal</item>
+    <style name="ItemTitleStyle" parent="width_wrap_height_wrap">
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:textAppearance">?attr/textAppearanceListItem</item>
+        <item name="android:textSize">@dimen/font_larger</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:layout_marginLeft">@dimen/spacing_normal</item>
+        <item name="android:layout_marginTop">@dimen/spacing_normal</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_normal</item>
     </style>
 
     <style name="ItemArrowStyle" parent="width_wrap_height_wrap">
@@ -33,15 +36,8 @@
         <item name="android:textSize">@dimen/font_large</item>
     </style>
 
-    <style name="ItemSearchTitle" parent="width_wrap_height_wrap">
-        <item name="android:layout_marginLeft">@dimen/spacing_normal</item>
-        <item name="android:layout_marginTop">@dimen/spacing_normal</item>
-        <item name="android:layout_marginBottom">@dimen/spacing_normal</item>
-        <item name="android:textAppearance">?attr/textAppearanceListItem</item>
-    </style>
-
-    <style name="ItemSearchAuthor" parent="width_wrap_height_wrap">
-        <item name="android:textSize">@dimen/font_small</item>
+    <style name="ItemAuthorStyle" parent="width_wrap_height_wrap">
+        <item name="android:textSize">@dimen/font_large</item>
     </style>
 
 </resources>

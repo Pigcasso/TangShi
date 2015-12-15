@@ -4,14 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <io.liamju.tangshi.view.FontTextView
         android:id="@id/text_searchable_title"
-        style="@style/ItemSearchTitle"
+        style="@style/ItemTitleStyle"
         android:text="静夜思" />
 
-    <TextView
+    <io.liamju.tangshi.view.FontTextView
         android:id="@id/text_searchable_author"
-        style="@style/ItemSearchAuthor"
+        style="@style/ItemAuthorStyle"
         android:layout_alignBottom="@id/text_searchable_title"
         android:layout_toRightOf="@id/text_searchable_title"
         android:text="李白" />

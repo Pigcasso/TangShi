@@ -31,8 +31,8 @@
                 android:layout_gravity="center_vertical"
                 android:src="@mipmap/ic_update" />
 
-            <android.support.v7.widget.AppCompatTextView
-                style="@style/ItemTextStyle"
+            <io.liamju.tangshi.view.FontTextView
+                style="@style/ItemTitleStyle"
                 android:text="@string/label_software_update"
                 android:textAppearance="?attr/textAppearanceListItem" />
         </LinearLayout>
@@ -48,8 +48,8 @@
                 android:layout_gravity="center_vertical"
                 android:src="@mipmap/ic_trash" />
 
-            <android.support.v7.widget.AppCompatTextView
-                style="@style/ItemTextStyle"
+            <io.liamju.tangshi.view.FontTextView
+                style="@style/ItemTitleStyle"
                 android:text="@string/label_clean_cache"
                 android:textAppearance="?attr/textAppearanceListItem" />
 
@@ -73,8 +73,8 @@
                 android:layout_gravity="center_vertical"
                 android:src="@mipmap/ic_alarmclock" />
 
-            <android.support.v7.widget.AppCompatTextView
-                style="@style/ItemTextStyle"
+            <io.liamju.tangshi.view.FontTextView
+                style="@style/ItemTitleStyle"
                 android:text="@string/label_history_record"
                 android:textAppearance="?attr/textAppearanceListItem" />
         </LinearLayout>
@@ -90,8 +90,8 @@
                 android:layout_gravity="center_vertical"
                 android:src="@mipmap/ic_star_brown" />
 
-            <android.support.v7.widget.AppCompatTextView
-                style="@style/ItemTextStyle"
+            <io.liamju.tangshi.view.FontTextView
+                style="@style/ItemTitleStyle"
                 android:text="@string/label_my_collection"
                 android:textAppearance="?attr/textAppearanceListItem" />
         </LinearLayout>
@@ -107,8 +107,8 @@
                 android:layout_gravity="center_vertical"
                 android:src="@mipmap/ic_feed_back" />
 
-            <android.support.v7.widget.AppCompatTextView
-                style="@style/ItemTextStyle"
+            <io.liamju.tangshi.view.FontTextView
+                style="@style/ItemTitleStyle"
                 android:text="@string/label_feed_back"
                 android:textAppearance="?attr/textAppearanceListItem" />
         </LinearLayout>
@@ -124,8 +124,8 @@
                 android:layout_gravity="center_vertical"
                 android:src="@mipmap/ic_about" />
 
-            <android.support.v7.widget.AppCompatTextView
-                style="@style/ItemTextStyle"
+            <io.liamju.tangshi.view.FontTextView
+                style="@style/ItemTitleStyle"
                 android:text="@string/label_about"
                 android:textAppearance="?attr/textAppearanceListItem" />
         </LinearLayout>

@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
+    <io.liamju.tangshi.view.FontTextView
         android:id="@id/text_item_footprint_title"
-        style="@style/ItemTextStyle" />
+        style="@style/ItemTitleStyle" />
 
 </LinearLayout>

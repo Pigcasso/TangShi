@@ -10,8 +10,8 @@
         android:layout_gravity="center_vertical"
         android:src="@mipmap/ic_label" />
 
-    <TextView
+    <io.liamju.tangshi.view.FontTextView
         android:id="@id/text_item_poetry_title"
-        style="@style/ItemTextStyle" />
+        style="@style/ItemTitleStyle" />
 
 </LinearLayout>

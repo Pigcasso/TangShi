@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/icons">
+    android:background="@color/white">
 
     <ImageView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
+            <io.liamju.tangshi.view.FontTextView
                 android:id="@id/text_poetry_detail_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
                 android:text="静夜思"
                 android:textSize="@dimen/font_huge" />
 
-            <TextView
+            <io.liamju.tangshi.view.FontTextView
                 android:id="@id/text_poetry_detail_auth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                 android:text="李白"
                 android:textSize="@dimen/font_normal" />
 
-            <TextView
+            <io.liamju.tangshi.view.FontTextView
                 android:id="@id/text_poetry_detail_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 android:text="窗前明月光，疑似地上霜。\n举头望明月，低头思故乡。"
                 android:textSize="@dimen/font_large" />
 
-            <TextView
+            <io.liamju.tangshi.view.FontTextView
                 android:id="@id/text_poetry_detail_desc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

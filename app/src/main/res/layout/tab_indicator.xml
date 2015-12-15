@@ -3,7 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <TextView
+    <io.liamju.tangshi.view.FontTextView
         android:id="@id/text_tab_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
