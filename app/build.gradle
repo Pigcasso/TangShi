@@ -9,7 +9,7 @@ android {
         minSdkVersion 8
         targetSdkVersion 23
         versionCode 1
-        versionName "1.1"
+        versionName "1.0"
     }
     buildTypes {
         release {
@@ -30,4 +30,5 @@ dependencies {
     compile 'io.github.brightyoyo:indexbar:1.0.0'
     compile 'com.github.promeg:tinypinyin:1.0.0'
     compile 'joda-time:joda-time:2.3'
+    compile 'im.fir:sdk:latest.integration'
 }

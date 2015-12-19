@@ -7,7 +7,7 @@ import android.os.Build;
  * @version 1.0
  * @since 15/12/9
  */
-public class VersionUtil {
+public class SDKUtil {
 
     /**
      * 设备SDK版本是否大于11

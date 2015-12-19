@@ -8,12 +8,16 @@ import android.widget.Toast;
 
 import butterknife.InjectView;
 import butterknife.OnClick;
+import im.fir.sdk.FIR;
+import im.fir.sdk.callback.VersionCheckCallback;
+import im.fir.sdk.version.AppVersion;
 import io.liamju.tangshi.AppConstants;
 import io.liamju.tangshi.IntentStarter;
 import io.liamju.tangshi.R;
 import io.liamju.tangshi.db.PoetryUtil;
 import io.liamju.tangshi.fragment.CleanCacheDialogFragment.OnCacheDataListener;
 import io.liamju.tangshi.utils.DataCleanManager;
+import io.liamju.tangshi.utils.VersionUtils;
 
 /**
  * @author LiamJu
@@ -79,7 +83,7 @@ public class SettingFragment extends BaseFragment {
 
     @OnClick(R.id.linear_setting_software)
     public void updateSoftware() {
-        Toast.makeText(getContext(), R.string.toast_latest_version, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "功能尚未实现", Toast.LENGTH_SHORT).show();
     }
 
     @OnClick(R.id.linear_setting_feed_back)

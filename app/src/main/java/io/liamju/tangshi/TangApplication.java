@@ -3,6 +3,7 @@ package io.liamju.tangshi;
 import android.app.Application;
 import android.graphics.Typeface;
 
+import im.fir.sdk.FIR;
 import io.liamju.tangshi.utils.TypefaceUtil;
 
 
@@ -25,6 +26,7 @@ public class TangApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        FIR.init(this);
         mInstance = this;
         iconTypeface = TypefaceUtil.getIconTypeface(this);
         fontTypeface = TypefaceUtil.getFontTypeface(this);
@@ -37,5 +39,6 @@ public class TangApplication extends Application {
     public Typeface getFontTypeface() {
         return fontTypeface;
     }
+
 
 }

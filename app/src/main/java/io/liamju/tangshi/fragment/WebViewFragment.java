@@ -23,7 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import io.liamju.tangshi.utils.VersionUtil;
+import io.liamju.tangshi.utils.SDKUtil;
 
 /**
  * A fragment that displays a WebView.
@@ -57,7 +57,7 @@ public class WebViewFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        if (VersionUtil.hasHoneycomb11()) {
+        if (SDKUtil.hasHoneycomb11()) {
             mWebView.onPause();
         }
     }
@@ -67,7 +67,7 @@ public class WebViewFragment extends Fragment {
      */
     @Override
     public void onResume() {
-        if (VersionUtil.hasHoneycomb11()) {
+        if (SDKUtil.hasHoneycomb11()) {
             mWebView.onResume();
         }
         super.onResume();

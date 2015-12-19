@@ -5,11 +5,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.TextView;
 
+import butterknife.InjectView;
 import butterknife.OnClick;
 import io.liamju.tangshi.AppConstants;
 import io.liamju.tangshi.IntentStarter;
 import io.liamju.tangshi.R;
+import io.liamju.tangshi.TangApplication;
+import io.liamju.tangshi.utils.VersionUtils;
 
 /**
  * @author LiamJu
@@ -18,16 +22,21 @@ import io.liamju.tangshi.R;
  */
 public class AboutFragment extends BaseFragment {
 
+    @InjectView(R.id.text_about_version_name)
+    TextView versionName;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(R.string.title_about);
         setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        versionName.setText(VersionUtils.getVersionName(getContext().getApplicationContext()));
     }
 
     @Override
