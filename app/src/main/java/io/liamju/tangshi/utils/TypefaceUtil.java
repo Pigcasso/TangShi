@@ -17,7 +17,8 @@ public class TypefaceUtil {
     public static final String FONT_PATH = "fonts/Regular.otf";
 
     public static Typeface getFontTypeface(Context context) {
-        return Typeface.createFromAsset(context.getAssets(), FONT_PATH);
+//        return Typeface.createFromAsset(context.getAssets(), FONT_PATH);
+        return null;
     }
 
     public static Typeface getIconTypeface(Context context) {
