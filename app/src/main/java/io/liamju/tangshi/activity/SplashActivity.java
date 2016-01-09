@@ -22,6 +22,7 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void run() {
                 IntentStarter.showMain(SplashActivity.this);
+                finish();
             }
         },2000L);
     }

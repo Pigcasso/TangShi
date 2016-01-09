@@ -46,16 +46,14 @@ public class PoetryUtil {
     }
 
     public static PoetryUtil getInstance(Context context) {
-        if (mInstance == null) {
+        if (mInstance == null)
             mInstance = new PoetryUtil(context);
-        }
         return mInstance;
     }
 
     private void initPoetryList(Context context) {
-        if (mPoetryList != null) {
+        if (mPoetryList != null)
             return;
-        }
         AssetManager assetManager = context.getApplicationContext().getAssets();
         try {
             InputStream is = assetManager.open("tangshi300.xml");

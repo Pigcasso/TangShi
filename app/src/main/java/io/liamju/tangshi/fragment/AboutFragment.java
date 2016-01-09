@@ -1,7 +1,5 @@
 package io.liamju.tangshi.fragment;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -12,7 +10,6 @@ import butterknife.OnClick;
 import io.liamju.tangshi.AppConstants;
 import io.liamju.tangshi.IntentStarter;
 import io.liamju.tangshi.R;
-import io.liamju.tangshi.TangApplication;
 import io.liamju.tangshi.utils.VersionUtils;
 
 /**
