@@ -14,11 +14,11 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    /*configurations {
+    configurations {
         compile.exclude module: 'stax'
         compile.exclude module: 'stax-api'
         compile.exclude module: 'xpp3'
-    }*/
+    }
 
     buildTypes {
         release {
@@ -39,7 +39,7 @@ dependencies {
     compile deps.supportappcompat
     compile deps.support
     compile deps.supportrecyclerview
-//    compile deps.simplexml
+    compile deps.simplexml
     compile 'com.jakewharton:butterknife:5.1.1'
     compile 'com.orhanobut:logger:1.11'
     compile 'io.github.brightyoyo:indexbar:1.0.0'
