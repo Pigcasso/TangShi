@@ -4,6 +4,7 @@ import android.app.Application;
 import android.graphics.Typeface;
 
 import im.fir.sdk.FIR;
+import io.liamju.tangshi.utils.MobclickAgentHelper;
 import io.liamju.tangshi.utils.TypefaceUtil;
 
 
@@ -27,6 +28,7 @@ public class TangApplication extends Application {
     public void onCreate() {
         super.onCreate();
         FIR.init(this);
+        MobclickAgentHelper.getInstance().init(this);
         mInstance = this;
         iconTypeface = TypefaceUtil.getIconTypeface(this);
         fontTypeface = TypefaceUtil.getFontTypeface(this);

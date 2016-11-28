@@ -4,11 +4,9 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
-import io.liamju.tangshi.R;
+import io.liamju.tangshi.utils.MobclickAgentHelper;
 
 /**
  * @author LiamJu
@@ -23,6 +21,18 @@ public abstract class BaseActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(getLayoutResId());
         ButterKnife.inject(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgentHelper.getInstance().onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgentHelper.getInstance().onPause(this);
     }
 
     protected abstract int getLayoutResId();

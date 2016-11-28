@@ -16,6 +16,7 @@ import io.liamju.tangshi.R;
 import io.liamju.tangshi.adapter.PoetryAdapter;
 import io.liamju.tangshi.db.PoetryUtil;
 import io.liamju.tangshi.entity.Poetry;
+import io.liamju.tangshi.utils.MobclickAgentHelper;
 
 /**
  * @author LiamJu
@@ -40,6 +41,7 @@ public class PoetryListFragment extends BaseListFragment<PoetryAdapter> {
                     @Override
                     public void onItemClick(View view, int position) {
                         Poetry poetry = mAdapter.getData().get(position);
+                        MobclickAgentHelper.getInstance().onClickPoetryListItem(getContext(), poetry);
                         IntentStarter.showPoetryDetail(view.getContext(), poetry);
                     }
                 });

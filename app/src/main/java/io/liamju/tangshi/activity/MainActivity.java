@@ -16,9 +16,10 @@ import android.widget.TextView;
 import butterknife.InjectView;
 import io.liamju.tangshi.IntentStarter;
 import io.liamju.tangshi.R;
+import io.liamju.tangshi.utils.MobclickAgentHelper;
 
 public class MainActivity extends BaseActivity {
-
+    private static final String TAG = MainActivity.class.getSimpleName();
     @InjectView(R.id.tab_host)
     FragmentTabHost mTabHost;
 
@@ -49,6 +50,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_search) {
+            MobclickAgentHelper.getInstance().onClickSearch(this);
             IntentStarter.searchPoetry(this);
         }
         return true;
@@ -56,6 +58,12 @@ public class MainActivity extends BaseActivity {
 
     private void initTabs() {
         mTabHost.setup(this, getSupportFragmentManager(), R.id.real_tab_content);
+        mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String tabId) {
+                MobclickAgentHelper.getInstance().onClickMainTabHost(MainActivity.this, tabId);
+            }
+        });
         if (Build.VERSION.SDK_INT > 10) {
             mTabHost.getTabWidget().setShowDividers(0);
         }

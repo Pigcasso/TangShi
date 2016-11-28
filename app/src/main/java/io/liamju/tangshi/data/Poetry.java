@@ -9,8 +9,7 @@ import org.simpleframework.xml.Root;
 @Root(name = "node")
 public class Poetry {
 
-    private int id;
-
+    private Long id;
     @Element
     private String title;
     @Element

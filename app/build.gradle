@@ -21,6 +21,12 @@ android {
         compile.exclude module: 'xpp3'
     }
 
+    productFlavors {
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -42,6 +48,7 @@ dependencies {
     compile deps.supportrecyclerview
     compile deps.simplexml
     compile deps.greenrobotgreendao
+    compile 'com.umeng.analytics:analytics:latest.integration'
     compile 'com.jakewharton:butterknife:5.1.1'
     compile 'com.orhanobut:logger:1.11'
     compile 'io.github.brightyoyo:indexbar:1.0.0'
