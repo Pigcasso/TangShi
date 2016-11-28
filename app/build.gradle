@@ -33,6 +33,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    greendao {
+        schemaVersion 1
+        daoPackage 'io.liamju.tangshi.data.source.local'
+        targetGenDir 'src/main/java'
+    }
 }
 
 dependencies {
