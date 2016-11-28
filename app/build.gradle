@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -40,6 +41,7 @@ dependencies {
     compile deps.support
     compile deps.supportrecyclerview
     compile deps.simplexml
+    compile deps.greenrobotgreendao
     compile 'com.jakewharton:butterknife:5.1.1'
     compile 'com.orhanobut:logger:1.11'
     compile 'io.github.brightyoyo:indexbar:1.0.0'
