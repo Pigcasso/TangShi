@@ -5,14 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import io.liamju.tangshi.activity.BaseActivity;
 import io.liamju.tangshi.activity.MainActivity;
 import io.liamju.tangshi.activity.PoetryDetailActivity;
 import io.liamju.tangshi.activity.SearchableActivity;
-import io.liamju.tangshi.activity.SplashActivity;
 import io.liamju.tangshi.activity.container.FragmentArgs;
 import io.liamju.tangshi.activity.container.FragmentContainerActivity;
 import io.liamju.tangshi.entity.Poetry;
@@ -20,7 +19,6 @@ import io.liamju.tangshi.fragment.AboutFragment;
 import io.liamju.tangshi.fragment.CollectionFragment;
 import io.liamju.tangshi.fragment.CommListFragment;
 import io.liamju.tangshi.fragment.HistoryFragment;
-import io.liamju.tangshi.fragment.OnlyLoadUrlFragment;
 
 /**
  * @author LiamJu
@@ -32,6 +30,13 @@ public class IntentStarter {
     public static void showPoetryDetail(Context context, Poetry poetry) {
         Intent intent = new Intent(context, PoetryDetailActivity.class);
         intent.putExtra(AppConstants.KEY_POETRY_DETAIL, poetry);
+        context.startActivity(intent);
+    }
+
+    public static void showPoetryDetails(Context context, int currentIndex, ArrayList<Poetry> poetryList) {
+        Intent intent = new Intent(context, PoetryDetailActivity.class);
+        intent.putExtra(AppConstants.KEY_POETRY_CURRENT_INDEX, currentIndex);
+        intent.putParcelableArrayListExtra(AppConstants.KEY_POETRY_DETAIL_LIST, poetryList);
         context.startActivity(intent);
     }
 

@@ -1,13 +1,14 @@
 package io.liamju.tangshi.entity;
 
-import java.io.Serializable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 /**
  * @author LiamJu
  * @version 1.0
  * @since 15/11/29
  */
-public class Poetry implements Serializable {
+public class Poetry implements Parcelable {
 
     private String title;
     private char sort; // 标题首字母
@@ -69,4 +70,43 @@ public class Poetry implements Serializable {
                 || auth.contains(key)
                 || content.contains(key);
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.title);
+        dest.writeInt(this.sort);
+        dest.writeString(this.auth);
+        dest.writeString(this.type);
+        dest.writeString(this.content);
+        dest.writeString(this.desc);
+    }
+
+    public Poetry() {
+    }
+
+    protected Poetry(Parcel in) {
+        this.title = in.readString();
+        this.sort = (char) in.readInt();
+        this.auth = in.readString();
+        this.type = in.readString();
+        this.content = in.readString();
+        this.desc = in.readString();
+    }
+
+    public static final Parcelable.Creator<Poetry> CREATOR = new Parcelable.Creator<Poetry>() {
+        @Override
+        public Poetry createFromParcel(Parcel source) {
+            return new Poetry(source);
+        }
+
+        @Override
+        public Poetry[] newArray(int size) {
+            return new Poetry[size];
+        }
+    };
 }

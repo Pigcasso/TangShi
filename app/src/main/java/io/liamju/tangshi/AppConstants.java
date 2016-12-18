@@ -35,6 +35,9 @@ public class AppConstants {
     public static final String URL_DEVELOPER_HOMEPAGE = "http://weibo.com/droideep";
     public static final String MAIL_DEVELOPER = "droideep@163.com";
 
+    public static final String KEY_POETRY_CURRENT_INDEX = "poetry_current_index";
+    public static final String KEY_POETRY_DETAIL_LIST = "poetry_detail_list";
+
     // 用于fir.im检测更新
     public static final String API_TOKEN = "929a173194cb6a8aff40a39396c5c7d0";
 }
