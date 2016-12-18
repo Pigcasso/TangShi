@@ -3,12 +3,11 @@ package io.liamju.tangshi.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
-import butterknife.ButterKnife;
+import java.util.ArrayList;
+
 import butterknife.InjectView;
 import io.github.brightyoyo.IndexBar;
 import io.liamju.tangshi.IntentStarter;
@@ -42,7 +41,8 @@ public class PoetryListFragment extends BaseListFragment<PoetryAdapter> {
                     public void onItemClick(View view, int position) {
                         Poetry poetry = mAdapter.getData().get(position);
                         MobclickAgentHelper.getInstance().onClickPoetryListItem(getContext(), poetry);
-                        IntentStarter.showPoetryDetail(view.getContext(), poetry);
+                        IntentStarter.showPoetryDetails(getActivity(), position,
+                                new ArrayList<>(mAdapter.getData()));
                     }
                 });
     }
@@ -70,19 +70,5 @@ public class PoetryListFragment extends BaseListFragment<PoetryAdapter> {
     @Override
     protected int getLayoutResId() {
         return R.layout.fragment_poetry_list;
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.inject(this, rootView);
-        return rootView;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        ButterKnife.reset(this);
     }
 }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ import io.liamju.tangshi.fragment.AboutFragment;
 import io.liamju.tangshi.fragment.CollectionFragment;
 import io.liamju.tangshi.fragment.CommListFragment;
 import io.liamju.tangshi.fragment.HistoryFragment;
+import io.liamju.tangshi.fragment.PoetryDetailsFragment;
 
 /**
  * @author LiamJu
@@ -33,11 +35,11 @@ public class IntentStarter {
         context.startActivity(intent);
     }
 
-    public static void showPoetryDetails(Context context, int currentIndex, ArrayList<Poetry> poetryList) {
-        Intent intent = new Intent(context, PoetryDetailActivity.class);
-        intent.putExtra(AppConstants.KEY_POETRY_CURRENT_INDEX, currentIndex);
-        intent.putParcelableArrayListExtra(AppConstants.KEY_POETRY_DETAIL_LIST, poetryList);
-        context.startActivity(intent);
+    public static void showPoetryDetails(Activity activity, int currentIndex, ArrayList<Poetry> poetryList) {
+        Bundle args = new Bundle();
+        args.putInt(AppConstants.KEY_POETRY_CURRENT_INDEX, currentIndex);
+        args.putParcelableArrayList(AppConstants.KEY_POETRY_DETAIL_LIST, poetryList);
+        FragmentContainerActivity.launch(activity, PoetryDetailsFragment.class, FragmentArgs.transToArgs(args));
     }
 
     public static void showPoetryDetailForResult(Fragment fragment, Poetry poetry) {

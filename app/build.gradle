@@ -25,6 +25,10 @@ android {
         wandoujia {
             manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
         }
+
+        newchapter {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
     }
 
     buildTypes {
@@ -43,11 +47,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-all:2.0.2-beta'
 
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-    androidTestCompile 'org.mockito:mockito-core:2.2.25'
 
     compile deps.supportappcompat
     compile deps.support
@@ -61,4 +61,9 @@ dependencies {
     compile 'com.github.promeg:tinypinyin:1.0.0'
     compile 'joda-time:joda-time:2.3'
     compile 'im.fir:sdk:latest.integration'
+    compile 'com.android.support:support-v4:25.0.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-all:2.0.2-beta'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'org.mockito:mockito-core:2.2.25'
 }

@@ -38,7 +38,9 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected void initBackground() {
-        container.setBackgroundResource(R.color.white);
+        if (container != null) {
+            container.setBackgroundResource(R.color.white);
+        }
     }
 
     @Override
