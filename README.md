@@ -10,21 +10,12 @@
 
 ## 截图
 
-
-
-![ScreenShot](ScreenShot/ScreenShot1.png)
-
-
-
-![ScreenShot2](ScreenShot/ScreenShot2.png)
-
-
-
-![ScreenShot2](ScreenShot/ScreenShot3.png)
-
-
-
-![ScreenShot2](ScreenShot/ScreenShot4.png)
+<table>
+  <th><img src="ScreenShot/ScreenShot1.png" /></th>
+  <th><img src="ScreenShot/ScreenShot2.png" /></th>
+  <th><img src="ScreenShot/ScreenShot3.png" /></th>
+  <th><img src="ScreenShot/ScreenShot4.png" /></th>
+</table>
 
 ## 版本1.0
 
