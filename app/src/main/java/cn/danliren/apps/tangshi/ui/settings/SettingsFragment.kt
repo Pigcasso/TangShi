@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import cn.danliren.apps.tangshi.R
@@ -26,6 +27,7 @@ class SettingsFragment : Fragment() {
     ): View? {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
+        binding.cleanCache.isVisible = false
         binding.cleanCache.setOnClickListener {
         }
         binding.history.setOnClickListener {
