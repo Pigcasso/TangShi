@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_main">
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="cn.danliren.apps.tangshi.ui.main.MainFragment"
+        android:label="@string/title_poetry"
+        tools:layout="@layout/fragment_main" />
+
+    <fragment
+        android:id="@+id/navigation_poetry_pager"
+        android:name="cn.danliren.apps.tangshi.ui.poetrylist.PoetryPagerFragment"
+        android:label="@string/title_poetry_pager"
+        tools:layout="@layout/fragment_poetry_pager" />
+
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="cn.danliren.apps.tangshi.ui.about.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/navigation_favorite_list"
+        android:name="cn.danliren.apps.tangshi.ui.favoritelist.FavoriteListFragment"
+        android:label="@string/label_my_favorites"
+        tools:layout="@layout/fragment_favorite_list">
+
+        <action
+            android:id="@+id/action_navigation_favorite_list_to_navigation_poetry_pager_of_favorite"
+            app:destination="@id/navigation_poetry_pager_of_favorite" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_poetry_pager_of_favorite"
+        android:name="cn.danliren.apps.tangshi.ui.favoritelist.PoetryPagerOfFavoriteFragment"
+        android:label="PoetryPagerOfFavoriteFragment"
+        tools:layout="@layout/fragment_poetry_pager" />
+    <fragment
+        android:id="@+id/navigation_history_list"
+        android:name="cn.danliren.apps.tangshi.ui.historylist.HistoryListFragment"
+        android:label="@string/label_history_record"
+        tools:layout="@layout/fragment_history_list" />
+    <fragment
+        android:id="@+id/navigation_poetry_list_of_auth"
+        android:name="cn.danliren.apps.tangshi.ui.authlist.PoetryListOfAuthFragment"
+        android:label="PoetryListOfAuthFragment"
+        tools:layout="@layout/fragment_poetry_list" />
+    <fragment
+        android:id="@+id/navigation_poetry_pager_of_auth"
+        android:name="cn.danliren.apps.tangshi.ui.authlist.PoetryPagerOfAuthFragment"
+        android:label="@string/title_poetry_pager"
+        tools:layout="@layout/fragment_poetry_pager" />
+    <fragment
+        android:id="@+id/navigation_poetry_list_of_category"
+        android:name="cn.danliren.apps.tangshi.ui.categorylist.PoetryListOfCategoryFragment"
+        android:label="@string/title_category"
+        tools:layout="@layout/fragment_poetry_list" />
+    <fragment
+        android:id="@+id/navigation_poetry_pager_of_category"
+        android:name="cn.danliren.apps.tangshi.ui.categorylist.PoetryPagerOfCategoryFragment"
+        android:label="@string/title_category"
+        tools:layout="@layout/fragment_poetry_pager" />
+</navigation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="IndexBar">
+        <attr name="indexBarColorNormal" format="color|reference" />
+        <attr name="indexBarColorPressed" format="color|reference" />
+        <attr name="alphabetTextColor" format="color|reference" />
+        <attr name="alphabetTextSize" format="dimension|reference" />
+        <attr name="alphabetPadding" format="dimension|reference" />
+        <attr name="indexBarRound" format="dimension|reference" />
+        <attr name="indexBarSides" format="dimension|reference" />
+        <attr name="withinIndexBar" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ItemView">
+        <attr name="title" format="string" />
+        <attr name="subtitle" format="string" />
+        <attr name="heading" format="reference" />
+        <attr name="tailing" format="reference" />
+    </declare-styleable>
+</resources>

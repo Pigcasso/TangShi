@@ -1,55 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.liamju.tangshi">
-
-    <!-- 必选 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".TangApplication"
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <meta-data
-            android:name="BUG_HD_SDK_GENERAL_KEY"
-            android:value="0dd9025c6cc345492f530175f35de7c4" />
-
-        <activity android:name=".activity.SplashActivity">
+        android:theme="@style/Theme.TangShi"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
-
-        <activity
-            android:name=".activity.MainActivity"
-            android:exported="false"
-            android:label="@string/title_activity_main" />
-
-        <activity
-            android:name=".activity.PoetryDetailActivity"
-            android:exported="false"
-            android:label="@string/title_activity_poetry_detail" />
-
-        <activity
-            android:name=".activity.container.FragmentContainerActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".activity.SearchableActivity"
-            android:exported="false"
-            android:label="" />
-
-        <!--友盟统计分析-->
-        <meta-data android:value="583ad64ff5ade46a58000a06" android:name="UMENG_APPKEY"/>
-        <meta-data android:value="${UMENG_CHANNEL_VALUE}" android:name="UMENG_CHANNEL"/>
-
     </application>
 
 </manifest>

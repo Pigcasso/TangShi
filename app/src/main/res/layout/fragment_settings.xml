@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:divider="?android:attr/listDivider"
+            app:showDividers="middle">
+
+            <cn.danliren.apps.tangshi.widget.ItemView
+                android:id="@+id/cleanCache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:heading="@drawable/ic_baseline_delete_outline_24"
+                app:title="@string/label_clean_cache" />
+
+            <cn.danliren.apps.tangshi.widget.ItemView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:heading="@drawable/ic_baseline_alarm_24"
+                app:title="@string/label_history_record" />
+
+            <cn.danliren.apps.tangshi.widget.ItemView
+                android:id="@+id/myFavorites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:heading="@drawable/ic_baseline_star_border_24"
+                app:title="@string/label_my_favorites" />
+
+            <cn.danliren.apps.tangshi.widget.ItemView
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:heading="@drawable/ic_baseline_feedback_24"
+                app:title="@string/label_feed_back" />
+
+            <cn.danliren.apps.tangshi.widget.ItemView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:heading="@drawable/ic_baseline_info_24"
+                app:title="@string/label_about" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

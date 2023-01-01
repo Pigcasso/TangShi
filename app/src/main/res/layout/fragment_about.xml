@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@id/layout_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="?colorOnPrimary" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,80 +31,54 @@
             android:layout_marginTop="@dimen/spacing_huge"
             android:src="@mipmap/ic_launcher" />
 
-        <io.liamju.tangshi.view.FontTextView
-            android:id="@id/text_about_version_name"
+        <TextView
+            android:id="@+id/versionName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_small"
-            android:textSize="@dimen/font_large" />
+            android:textSize="@dimen/font_large"
+            tools:text="1.0.0" />
     </LinearLayout>
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_small"
         android:background="@color/white"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:divider="?android:attr/listDivider"
+        app:showDividers="middle">
 
-        <RelativeLayout
-            android:id="@id/relative_about_designer"
+        <cn.danliren.apps.tangshi.widget.ItemView
+            android:id="@+id/aboutDesigner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:subtitle="@string/label_designer_name"
+            app:tailing="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:title="@string/label_designer" />
 
-            <io.liamju.tangshi.view.FontTextView
-                style="@style/ItemTitleStyle"
-                android:text="@string/label_designer" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:orientation="horizontal">
-
-                <io.liamju.tangshi.view.FontTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_designer_name" />
-
-                <io.liamju.tangshi.view.IconTextView style="@style/ItemArrowStyle" />
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@id/relative_about_developer"
+        <cn.danliren.apps.tangshi.widget.ItemView
+            android:id="@+id/aboutDeveloper"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:subtitle="@string/label_developer_name"
+            app:tailing="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:title="@string/label_developer" />
 
-            <io.liamju.tangshi.view.FontTextView
-                style="@style/ItemTitleStyle"
-                android:text="@string/label_developer" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:orientation="horizontal">
-
-                <io.liamju.tangshi.view.FontTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_developer_name" />
-
-                <io.liamju.tangshi.view.IconTextView style="@style/ItemArrowStyle" />
-            </LinearLayout>
-
-        </RelativeLayout>
-    </android.support.v7.widget.LinearLayoutCompat>
-
-    <io.liamju.tangshi.view.FontTextView
-        android:id="@id/text_about_introduce"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_normal"
-        android:text="@string/label_about_introduce"
-        android:textSize="@dimen/font_large" />
+        android:layout_marginHorizontal="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_normal">
+
+        <TextView
+            android:id="@+id/text_about_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_about_introduce"
+            android:textSize="@dimen/font_large" />
+    </ScrollView>
 
 </LinearLayout>

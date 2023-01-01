@@ -1,69 +1,58 @@
-apply plugin: 'com.android.application'
-apply plugin: 'org.greenrobot.greendao'
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    namespace 'cn.danliren.apps.tangshi'
+    compileSdk 33
 
     defaultConfig {
-        applicationId "io.liamju.tangshi"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "2.1.0"
+        applicationId "cn.danliren.apps.tangshi"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-
-    configurations {
-        compile.exclude module: 'stax'
-        compile.exclude module: 'stax-api'
-        compile.exclude module: 'xpp3'
-    }
-
-    productFlavors {
-        wandoujia {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
-        }
-
-        newchapter {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
-        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-    greendao {
-        schemaVersion 1
-        daoPackage 'io.liamju.tangshi.data.source.local'
-        targetGenDir 'src/main/java'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
 
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    def room_version = "2.4.3"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
-    compile deps.supportappcompat
-    compile deps.support
-    compile deps.supportrecyclerview
-    compile deps.simplexml
-    compile deps.greenrobotgreendao
-    compile 'com.umeng.analytics:analytics:latest.integration'
-    compile 'com.jakewharton:butterknife:5.1.1'
-    compile 'com.orhanobut:logger:1.11'
-    compile 'io.github.brightyoyo:indexbar:1.0.0'
-    compile 'com.github.promeg:tinypinyin:1.0.0'
-    compile 'joda-time:joda-time:2.3'
-    compile 'im.fir:sdk:latest.integration'
-    compile 'com.android.support:support-v4:25.0.0'
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-all:2.0.2-beta'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-    androidTestCompile 'org.mockito:mockito-core:2.2.25'
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
 }

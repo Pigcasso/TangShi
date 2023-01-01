@@ -1,1 +1,18 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // 为了下载 'com.github.promeg:tinypinyin:2.0.3'
+        maven { url "https://maven.aliyun.com/repository/spring" }
+    }
+}
+rootProject.name = "TangShi"
 include ':app'

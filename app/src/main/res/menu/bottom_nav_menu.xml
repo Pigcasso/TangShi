@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_poetry_list"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:title="@string/title_poetry" />
+
+    <item
+        android:id="@+id/navigation_auth_list"
+        android:icon="@drawable/ic_person_24"
+        android:title="@string/title_auth" />
+
+    <item
+        android:id="@+id/navigation_category_list"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="@string/title_category" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_24"
+        android:title="@string/title_settings" />
+
+</menu>

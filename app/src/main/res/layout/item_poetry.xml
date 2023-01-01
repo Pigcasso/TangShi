@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
@@ -8,10 +9,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:src="@mipmap/ic_label" />
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:src="@drawable/ic_baseline_label_24" />
 
-    <io.liamju.tangshi.view.FontTextView
-        android:id="@id/text_item_poetry_title"
-        style="@style/ItemTitleStyle" />
+    <TextView
+        android:id="@+id/item_title"
+        style="@style/ItemTitleStyle"
+        tools:text="Title" />
 
 </LinearLayout>
