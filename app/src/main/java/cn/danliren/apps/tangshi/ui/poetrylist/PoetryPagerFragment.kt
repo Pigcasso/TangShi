@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.MenuItemCompat
+import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
@@ -43,8 +44,6 @@ class PoetryPagerFragment : ViewBindingFragment<FragmentPoetryPagerBinding>() {
             requireActivity().findNavController(R.id.nav_host_fragment_activity_main).navigateUp()
         }
 
-        binding.viewPager.registerOnPageChangeCallback(onPageChangeCallback)
-
         binding.toolbar.menu?.findItem(R.id.menu_favorite)?.let { menuItem ->
             val attrs = intArrayOf(com.google.android.material.R.attr.colorOnPrimary)
             val a = requireContext().obtainStyledAttributes(attrs)
@@ -63,6 +62,10 @@ class PoetryPagerFragment : ViewBindingFragment<FragmentPoetryPagerBinding>() {
                 else -> false
             }
         }
+
+        binding.imageView.isVisible = !resources.getBoolean(R.bool.is_night_mode)
+
+        binding.viewPager.registerOnPageChangeCallback(onPageChangeCallback)
 
         viewModel.poetryList.observe(viewLifecycleOwner) {
             binding.viewPager.adapter = PoetryPagerAdapter(this, it)

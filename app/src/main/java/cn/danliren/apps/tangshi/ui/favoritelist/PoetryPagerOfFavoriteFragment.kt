@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.MenuItemCompat
+import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
@@ -63,6 +64,8 @@ class PoetryPagerOfFavoriteFragment : ViewBindingFragment<FragmentPoetryPagerBin
                 else -> false
             }
         }
+
+        binding.imageView.isVisible = !resources.getBoolean(R.bool.is_night_mode)
 
         binding.viewPager.registerOnPageChangeCallback(onPageChangeCallback)
 

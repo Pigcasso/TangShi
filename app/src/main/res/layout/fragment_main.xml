@@ -31,6 +31,7 @@
         app:menu="@menu/bottom_nav_menu" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
