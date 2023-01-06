@@ -19,35 +19,35 @@
             app:divider="?android:attr/listDivider"
             app:showDividers="middle">
 
-            <cn.danliren.apps.tangshi.widget.ItemView
+            <com.danliren.apps.tangshi.widget.ItemView
                 android:id="@+id/cleanCache"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:heading="@drawable/ic_baseline_delete_outline_24"
                 app:title="@string/label_clean_cache" />
 
-            <cn.danliren.apps.tangshi.widget.ItemView
+            <com.danliren.apps.tangshi.widget.ItemView
                 android:id="@+id/history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:heading="@drawable/ic_baseline_alarm_24"
                 app:title="@string/label_history_record" />
 
-            <cn.danliren.apps.tangshi.widget.ItemView
+            <com.danliren.apps.tangshi.widget.ItemView
                 android:id="@+id/myFavorites"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:heading="@drawable/ic_baseline_star_border_24"
                 app:title="@string/label_my_favorites" />
 
-            <cn.danliren.apps.tangshi.widget.ItemView
+            <com.danliren.apps.tangshi.widget.ItemView
                 android:id="@+id/feedback"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:heading="@drawable/ic_baseline_feedback_24"
                 app:title="@string/label_feed_back" />
 
-            <cn.danliren.apps.tangshi.widget.ItemView
+            <com.danliren.apps.tangshi.widget.ItemView
                 android:id="@+id/about"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

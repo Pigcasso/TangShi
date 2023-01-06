@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_poetry_list"
-        android:name="cn.danliren.apps.tangshi.ui.poetrylist.PoetryListFragment"
+        android:name="com.danliren.apps.tangshi.ui.poetrylist.PoetryListFragment"
         android:label="@string/title_poetry"
         tools:layout="@layout/fragment_poetry_list" />
 
     <fragment
         android:id="@+id/navigation_auth_list"
-        android:name="cn.danliren.apps.tangshi.ui.authlist.AuthListFragment"
+        android:name="com.danliren.apps.tangshi.ui.authlist.AuthListFragment"
         android:label="@string/title_auth"
         tools:layout="@layout/fragment_auth_list" />
 
     <fragment
         android:id="@+id/navigation_category_list"
-        android:name="cn.danliren.apps.tangshi.ui.categorylist.CategoryListFragment"
+        android:name="com.danliren.apps.tangshi.ui.categorylist.CategoryListFragment"
         android:label="@string/title_category"
         tools:layout="@layout/fragment_category_list" />
 
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="cn.danliren.apps.tangshi.ui.settings.SettingsFragment"
+        android:name="com.danliren.apps.tangshi.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
 </navigation>

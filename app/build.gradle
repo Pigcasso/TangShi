@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'cn.danliren.apps.tangshi'
+    namespace 'com.danliren.apps.tangshi'
     compileSdk 33
 
     defaultConfig {
-        applicationId "cn.danliren.apps.tangshi"
+        applicationId "com.danliren.apps.tangshi"
         minSdk 21
         targetSdk 33
         versionCode 1

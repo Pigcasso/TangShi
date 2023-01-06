@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
-    <cn.danliren.apps.tangshi.widget.IndexBar
+    <com.danliren.apps.tangshi.widget.IndexBar
         android:id="@+id/indexBar"
         android:layout_width="24dp"
         android:layout_height="0dp"

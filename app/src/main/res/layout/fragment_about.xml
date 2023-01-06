@@ -49,7 +49,7 @@
         app:divider="?android:attr/listDivider"
         app:showDividers="middle">
 
-        <cn.danliren.apps.tangshi.widget.ItemView
+        <com.danliren.apps.tangshi.widget.ItemView
             android:id="@+id/aboutDesigner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             app:tailing="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:title="@string/label_designer" />
 
-        <cn.danliren.apps.tangshi.widget.ItemView
+        <com.danliren.apps.tangshi.widget.ItemView
             android:id="@+id/aboutDeveloper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
